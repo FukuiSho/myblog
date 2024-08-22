@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>山田太郎のテックブログ</title>
+    <meta name="description" content="プログラミングと最新技術トレンドについての個人ブログ">
+    <style>
+        body {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .highlight, header .current a {
+            color: #3498db;
+            font-weight: bold;
+        }
+        #main {
+            float: left;
+            width: 70%;
+            padding: 0 30px;
+            box-sizing: border-box;
+        }
+        #sidebar {
+            float: right;
+            width: 30%;
+            background: #2c3e50;
+            color: #ffffff;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+        article {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        article h2 {
+            color: #2c3e50;
+        }
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            clear: both;
+        }
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 15px;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background: #2980b9;
+        }
+        #comment-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">山田太郎</span>のテックブログ</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="#home">ホーム</a></li>
+                    <li><a href="#about">プロフィール</a></li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="main">
+            <article>
+                <h2>最新のWeb開発トレンド2024</h2>
+                <p>2024年のWeb開発シーンでは、以下のトレンドが注目されています：</p>
+                <ul>
+                    <li>AIを活用したパーソナライゼーション</li>
+                    <li>WebAssemblyの普及</li>
+                    <li>マイクロフロントエンドアーキテクチャ</li>
+                    <li>サーバレスアーキテクチャの進化</li>
+                </ul>
+                <p>これらのトレンドは、より高速で柔軟、そして個別化されたWebエクスペリエンスの実現に貢献しています。</p>
+                <a href="#" class="btn">続きを読む</a>
+            </article>
+            <article>
+                <h2>JavaScriptフレームワーク比較：React vs Vue vs Angular</h2>
+                <p>人気のJavaScriptフレームワーク、React、Vue、Angularの特徴を比較してみましょう。</p>
+                <p>Reactは柔軟性と大規模アプリケーションの開発に強く、Vueは学習曲線が緩やかで小中規模のプロジェクトに適しています。一方、Angularは大規模な企業アプリケーションに向いています。</p>
+                <a href="#" class="btn">続きを読む</a>
+            </article>
+            <div id="comment-section">
+                <h3>コメント</h3>
+                <div id="comments"></div>
+                <form id="comment-form">
+                    <textarea id="comment-input" placeholder="コメントを入力してください" required></textarea>
+                    <button type="submit" class="btn">コメントを投稿</button>
+                </form>
+            </div>
+        </section>
+
+        <aside id="sidebar">
+            <h3>プロフィール</h3>
+            <img src="/api/placeholder/150/150" alt="山田太郎" style="border-radius: 50%; margin-bottom: 10px;">
+            <p>山田太郎です。10年以上のWeb開発経験を持つフルスタックエンジニアです。最新技術と開発手法について情報発信しています。</p>
+            <h3>カテゴリー</h3>
+            <ul>
+                <li><a href="#">Web開発</a></li>
+                <li><a href="#">プログラミング言語</a></li>
+                <li><a href="#">デザインパターン</a></li>
+                <li><a href="#">ツールとリソース</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 山田太郎のテックブログ</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const commentForm = document.getElementById('comment-form');
+            const commentInput = document.getElementById('comment-input');
+            const commentsContainer = document.getElementById('comments');
+
+            commentForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const commentText = commentInput.value.trim();
+                if (commentText) {
+                    const commentElement = document.createElement('div');
+                    commentElement.textContent = commentText;
+                    commentElement.style.backgroundColor = '#f0f0f0';
+                    commentElement.style.padding = '10px';
+                    commentElement.style.marginBottom = '10px';
+                    commentElement.style.borderRadius = '5px';
+                    commentsContainer.appendChild(commentElement);
+                    commentInput.value = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
